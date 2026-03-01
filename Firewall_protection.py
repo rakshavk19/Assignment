@@ -401,6 +401,7 @@ class SimpleFirewallGUI:
         self.root.after(1000, self.update_stats)
         
     def update_rules_display(self):
+        # Reject duplicate names - toggle/delete rely on unigueness
         """Update rules treeview"""
         # Clear current items
         for item in self.rules_tree.get_children():
