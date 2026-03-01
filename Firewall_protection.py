@@ -426,7 +426,7 @@ class SimpleFirewallGUI:
         logs = self.firewall.get_logs()
         for log in logs[-100:]:
             self.logs_text.insert(tk.END, log + '\n')
-            
+     #  add clear logs        
     def clear_logs(self):
         """Clear all logs"""
         if messagebox.askyesno("Confirm", "Clear all logs?"):
