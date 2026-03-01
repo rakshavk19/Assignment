@@ -566,7 +566,7 @@ class FirewallEngine:
         # IP check
         if rule.get('src_ip') and rule['src_ip'] != packet['src_ip']:
             return False
-            
+        # result true    
         return True
         
     def add_rule(self, rule):
