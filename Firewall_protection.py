@@ -484,6 +484,7 @@ class FirewallEngine:
         
     def load_default_rules(self):
         """Load default rules"""
+        # Source IP check - support both exact match and CIDR notation
         default_rules = [
             {'name': 'Allow HTTP', 'action': 'ALLOW', 'protocol': 'TCP', 'dst_port': '80'},
             {'name': 'Allow HTTPS', 'action': 'ALLOW', 'protocol': 'TCP', 'dst_port': '443'},
