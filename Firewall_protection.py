@@ -574,7 +574,7 @@ class FirewallEngine:
         rule['enabled'] = True
         self.rules.append(rule)
         self.add_log(f"Added rule: {rule['name']}")
-        
+    # add remove rule    
     def remove_rule(self, rule_name):
         """Remove rule"""
         self.rules = [r for r in self.rules if r['name'] != rule_name]
