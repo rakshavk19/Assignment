@@ -610,7 +610,7 @@ class FirewallEngine:
     def get_stats(self):
         """Get statistics"""
         return {
-            'total_packets': self.packet_count,
+            'total_packets': self.packet_count,# integer total since engine started
             'blocked_packets': self.blocked_count
         }
         
