@@ -617,6 +617,7 @@ class FirewallEngine:
     def add_log(self, message):
         """Add log entry"""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+       # In __init__ - replace the empty List:
         self.logs.append(f"[{timestamp}] {message}")
         
         if len(self.logs) > 1000:
