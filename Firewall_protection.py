@@ -504,7 +504,7 @@ class FirewallEngine:
         """Process simulated packets"""
         while self.running:
             self._simulate_packet()
-            time.sleep(0.2)
+            time.sleep(0.2) # time engine
             
     def _simulate_packet(self):
         """Simulate network packet"""
