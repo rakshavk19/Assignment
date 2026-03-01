@@ -510,7 +510,7 @@ class FirewallEngine:
         protocols = ['TCP', 'UDP', 'ICMP']
         ips = ['192.168.1.' + str(random.randint(2, 254)) for _ in range(5)]
         ports = [80, 443, 22, 3389, 8080, 53]
-        
+        # In __init__:
         packet = {
             'src_ip': random.choice(ips),
             'dst_ip': random.choice(ips),
