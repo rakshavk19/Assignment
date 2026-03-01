@@ -525,6 +525,7 @@ class FirewallEngine:
         
         if packet['blocked']:
             self.blocked_count += 1
+            # add one block object
             self.add_log(f"Blocked: {packet['src_ip']} -> {packet['dst_ip']} ({packet['protocol']})")
         else:
             self.add_log(f"Allowed: {packet['src_ip']} -> {packet['dst_ip']} ({packet['protocol']})")
