@@ -351,9 +351,10 @@ class SimpleFirewallGUI:
         self.rule_entries['dst_ip_entry'].delete(0, tk.END)
         self.rule_entries['src_port_entry'].delete(0, tk.END)
         self.rule_entries['dst_port_entry'].delete(0, tk.END)
-        
+
+    # add to the imports at the top of the file   
     def block_ip(self):
-        """Block single IP"""
+        """Block single IP""" # raises valueerror if invalid
         ip = self.block_ip_entry.get().strip()
         if ip:
             self.firewall.block_ip(ip)
