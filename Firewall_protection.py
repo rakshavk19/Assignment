@@ -29,7 +29,7 @@ class SimpleFirewallGUI:
         
         # Start updates
         self.update_stats()
-        
+      # create menu  
     def create_menu(self):
         """Create menu bar"""
         menubar = tk.Menu(self.root)
