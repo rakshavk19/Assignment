@@ -401,7 +401,7 @@ class SimpleFirewallGUI:
         self.root.after(1000, self.update_stats)
         
     def update_rules_display(self):
-        # Reject duplicate names - toggle/delete rely on unigueness
+        # Reject duplicate names - toggle/delete rely on uniqueness
         """Update rules treeview"""
         # Clear current items
         for item in self.rules_tree.get_children():
@@ -532,6 +532,7 @@ class FirewallEngine:
             self.add_log(f"Allowed: {packet['src_ip']} -> {packet['dst_ip']} ({packet['protocol']})")
             
         self.packet_count += 1
+        # In _simulate_packet - drop packet if GUI is too slow:
         self.packet_queue.put(packet)
         
     def check_packet(self, packet):
