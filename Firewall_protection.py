@@ -494,7 +494,7 @@ class FirewallEngine:
         for rule in default_rules:
             rule['enabled'] = True
             self.rules.append(rule)
-            
+   # start engine         
     def start(self):
         """Start firewall engine"""
         threading.Thread(target=self._process_packets, daemon=True).start()
