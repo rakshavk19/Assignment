@@ -521,7 +521,7 @@ class FirewallEngine:
         }
         
         # Check packet
-        packet['blocked'] = not self.check_packet(packet)
+        packet['blocked'] = not self.check_packet(packet) # In _simulate_packet -unsynchromised increments:
         
         if packet['blocked']:
             self.blocked_count += 1
