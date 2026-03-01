@@ -97,7 +97,7 @@ class SimpleFirewallGUI:
         
     def create_monitor_tab(self):
         """Create real-time monitoring tab"""
-        monitor_frame = ttk.Frame(self.notebook)
+        monitor_frame = ttk.Frame(self.notebook) # add single line
         self.notebook.add(monitor_frame, text="Live Monitor")
         
         # Control panel
