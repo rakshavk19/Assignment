@@ -638,7 +638,7 @@ class FirewallEngine:
             for log in self.logs:
                 f.write(log + '\n')
                 
-    def import_rules(self, filename):
+    def import_rules(self, filename):# add to GUI import if not already present
         """Import rules from JSON"""
         try:
             with open(filename, 'r') as f:
